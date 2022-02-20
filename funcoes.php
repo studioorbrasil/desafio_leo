@@ -1,7 +1,11 @@
 <?php
 
 header('Content-type: text/html; charset=utf-8');
-
+#*****************************************
+#Programa: funções da aplicação 
+#Autor: Marcos Pinheiro
+#Para: desafio_leo
+#*****************************************
 function loadCSS($arquivo,$media="screen"){//carrega os css
     $css = CSSPATH.$arquivo.'.css';
     if (file_exists(CSSPATH.$arquivo.'.css')) {
@@ -33,5 +37,14 @@ function incluirPagina($pagina, $vars = NULL, $pasta='views/'){
         echo "Página não encontrada em <b>".$pagina."</b>";
     }
 }
+
+function loadModulo($modulo,$tela){//carrega os modulos
+    if(@file_exists(MODULOSPATH.$modulo.'Modulo.php')){
+        require_once MODULOSPATH.$modulo."Modulo.php";
+    }else{
+        die('Modulo <b>'.$modulo.'Modulo.php</b> inexistente');
+    }
+}
+
 
 ?>
