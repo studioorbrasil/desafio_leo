@@ -6,6 +6,9 @@ header('Content-type: text/html; charset=utf-8');
 #Autor: Marcos Pinheiro
 #Para: desafio_leo
 #*****************************************
+require 'config.php';
+require_once "classes/autoload.php";
+
 function loadCSS($arquivo,$media="screen"){//carrega os css
     $css = CSSPATH.$arquivo.'.css';
     if (file_exists(CSSPATH.$arquivo.'.css')) {
