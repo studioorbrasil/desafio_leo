@@ -1,5 +1,9 @@
 <?php
-
+#********************************************************
+#Programa: Classe CRUD para operações no o banco de dados
+#Autor: Marcos Pinheiro
+#Para: desafio_Leo
+#********************************************************
 class CRUD {
     public $servidor = SERVIDOR;
     public $usuario = NOMEUSERBD;
@@ -55,6 +59,12 @@ class CRUD {
         }else{
             return FALSE;
         }
+    }
+
+    public function deletar($where){
+        $sqlDeletar = "DELETE FROM `{$this->getTabela()}` WHERE {$where}";
+        $deletar = $this->connecta->query($sqlDeletar);
+        $this->linhas = $deletar->rowCount();
     }
 
 
