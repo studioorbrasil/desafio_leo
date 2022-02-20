@@ -26,6 +26,39 @@ class CRUD {
 
     }
 
+    public function inserir($dados = array()){
+        $colunas = implode(",",array_keys($dados));
+        $valores = "'".implode("', '", $dados)."'";
+        $sqlInserir = "INSERT INTO `{$this->getTabela()}` ({$colunas}) VALUES ({$valores})";
+        $inserir = $this->connecta->query($sqlInserir);
+        $this->linhas = $inserir->rowCount();
+        if ($inserir) {
+            return TRUE;
+        }else{
+            return FALSE;
+        }
+    }
+
+    public function atualizar($dados= array(),$where){
+
+        foreach ($dados as $colunas => $valores) {
+            $campos[] = "$colunas = '$valores'";
+        }
+        $campos = implode(', ', $campos);
+        $sqlAtualizar = "UPDATE `{$this->getTabela()}` SET $campos  WHERE {$where}";
+        // echo $sqlAtualizar;
+        // exit();
+        $atualizar = $this->connecta->query($sqlAtualizar);
+        $this->linhas = $atualizar->rowCount();
+        if($atualizar){
+            return TRUE;
+        }else{
+            return FALSE;
+        }
+    }
+
+
+
 }
 
 ?>
