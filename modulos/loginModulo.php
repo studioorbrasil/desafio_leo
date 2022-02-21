@@ -29,7 +29,7 @@
                 $sessao->setValor('nome', $dadosLogin["nome"]);
                 $sessao->setValor('email', $dadosLogin["email"]);
                 $sessao->setValor('senha', $dadosLogin["senha"]);
-                $sessao->setValor('rem', $_POST["lembra"]);
+      
                 $usuarios->atualizar(array(
                     "acesso"=>date('d/m/Y')." ".date('H:i:s')
                 ),'id='.$dadosLogin["idu"]);
