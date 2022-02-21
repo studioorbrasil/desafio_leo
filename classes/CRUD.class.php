@@ -67,7 +67,19 @@ class CRUD {
         $this->linhas = $deletar->rowCount();
     }
 
+    public function listar($campos = null, $where=null){
 
+        $campos = $campos != "" ? $campos : "*";
+        $sqlSelecionar = "SELECT $campos FROM `{$this->getTabela()}` {$where}";
+        // echo $sqlSelecionar;
+        // exit();
+        $selecionar = $this->connecta->query($sqlSelecionar);
+        $selecionar->setFetchMode(PDO::FETCH_ASSOC);
+        $this->linhas = $selecionar->rowCount();
+
+        return $selecionar->fetchAll();
+
+    }
 
 }
 
