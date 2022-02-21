@@ -2,7 +2,7 @@
 
 header('Content-type: text/html; charset=utf-8');
 #*****************************************
-#Programa: funções da aplicação 
+#Programa: funções da aplicação
 #Autor: Marcos Pinheiro
 #Para: desafio_leo
 #*****************************************
@@ -48,6 +48,23 @@ function loadModulo($modulo,$tela){//carrega os modulos
         die('Modulo <b>'.$modulo.'Modulo.php</b> inexistente');
     }
 }
-
+//filtro sql injection básico
+function filtroSql($s) {
+$s = addslashes($s);
+$s = htmlspecialchars($s);
+$s = str_replace("SELECT","",$s);
+$s = str_replace("FROM","",$s);
+$s = str_replace("WHERE","",$s);
+$s = str_replace("INSERT","",$s);
+$s = str_replace("UPDATE","",$s);
+$s = str_replace("DELETE","",$s);
+$s = str_replace("DROP","",$s);
+$s = str_replace("DATABASE","",$s);
+$s = str_replace("USE","",$s);
+$s = str_replace("OR 1=1","",$s);
+$s = str_replace("--","",$s);
+$s = str_replace("'","",$s);
+return $s;
+}
 
 ?>

@@ -4,7 +4,7 @@ class login extends CRUD{
   public $email;
   public $senha;
     function __construct(){
-        parent::__construct();]
+        parent::__construct();
         $this->setTabela('usuarios');
     }
     public function getEmail(){

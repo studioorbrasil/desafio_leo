@@ -50,8 +50,6 @@ class CRUD {
         }
         $campos = implode(', ', $campos);
         $sqlAtualizar = "UPDATE `{$this->getTabela()}` SET $campos  WHERE {$where}";
-        // echo $sqlAtualizar;
-        // exit();
         $atualizar = $this->connecta->query($sqlAtualizar);
         $this->linhas = $atualizar->rowCount();
         if($atualizar){
@@ -71,8 +69,6 @@ class CRUD {
 
         $campos = $campos != "" ? $campos : "*";
         $sqlSelecionar = "SELECT $campos FROM `{$this->getTabela()}` {$where}";
-        // echo $sqlSelecionar;
-        // exit();
         $selecionar = $this->connecta->query($sqlSelecionar);
         $selecionar->setFetchMode(PDO::FETCH_ASSOC);
         $this->linhas = $selecionar->rowCount();
@@ -80,7 +76,17 @@ class CRUD {
         return $selecionar->fetchAll();
 
     }
+    public function ler($campos = null, $where=null){
 
+        $campos = $campos != "" ? $campos : "*";
+        $sqlSelecionar = "SELECT $campos FROM `{$this->getTabela()}` {$where}";
+        $selecionar = $this->connecta->query($sqlSelecionar);
+        $selecionar->setFetchMode(PDO::FETCH_ASSOC);
+        $this->linhas = $selecionar->rowCount();
+
+        return $selecionar->fetchAll(PDO::FETCH_OBJ);
+
+    }
 }
 
 ?>
