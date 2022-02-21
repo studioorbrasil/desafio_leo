@@ -3,9 +3,10 @@ $sessao = new sessao();
  include "verifica.php";
  ?>
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="pt-br" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Marcos Pinheiro Gomes">
     <title>Desafio Leo</title>
     <link
@@ -67,6 +68,10 @@ loadCSS('style');
                                     </div>
                                 </div>
                             </div>
+                            <div class="sanduiche">
+                              <span class="material-icons-outlined sandExtra">menu</span>
+
+                            </div>
                         </li>
 
                     </ul>
@@ -96,6 +101,10 @@ loadCSS('style');
                 </div>
               </div>
           </div>
+        </div>
+
+        <div class="modal1">
+
         </div>
         <footer>
           <div class="navf">

@@ -184,7 +184,17 @@ nav {
   justify-content: center;
   align-items: center;
 }
-
+.sanduiche {
+  width: 40px;
+  height: 98px;
+  /* border: 1px solid #ffa000; */
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.sandExtra{
+  font-size: 33px;
+}
 #inputCx {
   display: flex;
   justify-content: center;
@@ -306,7 +316,7 @@ input::placeholder {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  background-image: url(../imagens/hugo.png);
+  background-image: url(../imagens/silhueta.png);
   background-size: contain;
 }
 
@@ -495,4 +505,56 @@ footer {
   font-weight: bold;
   color:#ff0000;
   text-transform: uppercase;
+}
+
+@media (min-width: 1601px) {
+
+}
+
+@media (min-width: 1024px) and (max-width: 1600px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+@media (min-width: 540px) and (max-width: 767px) {
+  .divInput {
+    display: none;
+  }
+
+  .divUser {
+    display: none;
+  }
+  .sanduiche {
+    display: flex;
+  }
+
+}
+
+@media (min-width: 415px) and (max-width: 539px) {
+  .divInput {
+    display: none;
+  }
+
+  .divUser {
+    display: none;
+  }
+  .sanduiche {
+    display: flex;
+  }
+}
+
+@media (max-width: 375px) {
+  .divInput {
+    display: none;
+  }
+
+  .divUser {
+    display: none;
+  }
+  .sanduiche {
+    display: flex;
+  }
 }
