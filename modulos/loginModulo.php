@@ -19,6 +19,7 @@
             $login->setSenha($txtSenha);
 
             $result = $login->logar();
+
             if(count($result)>0){//maior que zero quando login bem sucedido
 
                 foreach ($result as $key => $dadosSession) {
@@ -29,7 +30,7 @@
                 $sessao->setValor('nome', $dadosLogin["nome"]);
                 $sessao->setValor('email', $dadosLogin["email"]);
                 $sessao->setValor('senha', $dadosLogin["senha"]);
-      
+
                 $usuarios->atualizar(array(
                     "acesso"=>date('d/m/Y')." ".date('H:i:s')
                 ),'id='.$dadosLogin["idu"]);
@@ -39,7 +40,7 @@
 
                 }
             }else{//login mal sucedido
-                    header("Location:?m=login&t=login&fail=1&bloq=0");
+                    header("Location:?m=login&t=login&fail=1");
             }
         break;
         case 'home':

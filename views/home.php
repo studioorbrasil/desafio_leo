@@ -36,66 +36,112 @@ loadCSS('style');
 
   </head>
   <body>
-        <div class="container">
-          <header>
+    <div class="container">
+        <header>
             <nav>
-              <div class="navContainer">
-                <img src="imagens/logoLeo.png" id="logo" alt="desafio_leo">
-                  <ul>
-                      <li>
-                          <div class="divInput">
-                              <div id="inputCx">
-                                  <input type="text" placeholder="Pesquisar cursos..." id="psq">
-                                  <button class="buttonSrc">
-                                      <span class="material-icons">search</span>
-                                  </button>
-                              </div>
-                          </div>
-                      </li>
-                      <li>
-                          <div class="divUser">
-                              <div class="baseUser">
-                                  <div class="fotoUser"></div>
-                                  <div class="infoUser">
-                                      <div id="bemVindo">Seja bem-vindo</div>
-                                      <div id="nomeUser"><?php echo $nomeLoc;?></div>
-                                  </div>
-                                  <div class="openUser">
-                                      <span class="material-icons-outlined">
-                                          arrow_drop_down
-                                      </span>
-                                  </div>
-                              </div>
-                          </div>
-                      </li>
-                  </ul>
-              </div>
+                <div class="navContainer">
+                    <img src="imagens/logoLeo.png" id="logo" alt="desafio_leo">
+                    <ul>
+                        <li>
+                            <div class="divInput">
+                                <div id="inputCx">
+                                    <input type="text" placeholder="Pesquisar cursos..." id="psq">
+                                    <button class="buttonSrc">
+                                        <span class="material-icons">search</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="divUser">
+                                <div class="baseUser">
+                                    <div class="fotoUser"></div>
+                                    <div class="infoUser">
+                                        <div id="bemVindo">Seja bem-vindo</div>
+                                        <div id="nomeUser"><?php echo $nomeLoc;?></div>
+                                    </div>
+                                    <div class="openUser">
+                                        <span class="material-icons-outlined">
+                                            arrow_drop_down
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
             </nav>
-          </header>
-          <div class="mainBanner">
+        </header>
+        <div class="mainBanner">
 
-            </div>
-            <div class="containerCursos">
-              <div class="tituloCursos">
-                <h2>Meus cursos</h2>
-              </div>
-              <div class="baseCursos">
-                  <div class="cardCurso">
-                      <div class="bannerCard" style="background-image:url(imagens/bannerCurso.png)!important;background-size:contain;background-repeat:no-repeat"></div>
-                      <div class="txtCurso">
-                        <h2>pellentesque malesuada</h2>
-                        <p>Curabitur blandit tempus portitor. Nulla vitae elit lebero, a pharetra auge.</p>
-                      </div>
-                      <button type="button" name="button">ver curso</button>
-                  </div>
-
-                  <div class="cardCurso addCard">
-                    <div class="bannerCard">
-
-                    </div>
-                  </div>
-              </div>
-            </div>
         </div>
+        <div class="containerCursos">
+          <div class="tituloCursos">
+            <h2>Meus cursos</h2>
+          </div>
+          <div class="baseCursos">
+              <div class="cardCurso">
+                  <div class="bannerCard" style="background-image:url(imagens/bannerCurso.png)!important;background-size:contain;background-repeat:no-repeat"></div>
+                  <div class="txtCurso">
+                    <h2>pellentesque malesuada</h2>
+                    <p>Curabitur blandit tempus portitor. Nulla vitae elit lebero, a pharetra auge.</p>
+                  </div>
+                  <button type="button" name="button">ver curso</button>
+              </div>
+
+              <div class="cardCurso addCard">
+                <div class="bannerCard">
+
+                </div>
+              </div>
+          </div>
+        </div>
+        <footer>
+          <div class="navf">
+            <div class="footContainer">
+                <div class="logoFoot">
+                  <div class="">
+                          <img src="imagens/logoLeo.png" id="logof" alt="desafio_leo">
+                  </div>
+                  <div class="textFoot">
+                    <p>Maecenas faucibus molis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                  </div>
+                </div>
+                <div class="linksFooter">
+                    <div class="contato">
+                        <table class="tabLinks">
+                          <tr>
+                            <td class="labelLinks">//Contato</td>
+                          </tr>
+                          <tr>
+                            <td  class="links">(21)98765-3434<br>contato@leolearning.com</td>
+                          </tr>
+                        </table>
+                    </div>
+                    <div class="redes">
+                      <table  class="tabLinks">
+                        <tr>
+                          <td class="labelLinks">//Redes Sociais</td>
+                        </tr>
+                        <tr>
+                          <td class="links">
+                            <img src="imagens/twitico.png" alt="">
+                            <img src="imagens/tubico.png" alt="">
+                            <img src="imagens/pintico.png" alt="">
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </footer>
+      <div class="copyDiv">
+        <div class="copyText">
+          <p>Copyright 2017 - All right reserved.</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

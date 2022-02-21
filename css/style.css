@@ -68,6 +68,30 @@ margin-top: 5px;
  background-size: contain;
 }
 
+/* container */
+.container {
+  max-width: 1920px;
+  width: 100%;
+}
+
+/* header */
+header {
+  position: relative;
+  top: 0;
+  height: auto;
+  width: 100%;
+}
+
+/* navbar */
+nav {
+  position: fixed;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1;
+}
+
 .nav:after {
   clear: both;
   content: "";
@@ -398,4 +422,77 @@ input::placeholder {
   font-size: 13px;
   margin-top: 10px;
   color: #888;
+}
+
+footer {
+  position: relative;
+  top: 99px;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  height: 200px;
+  background-color: #fff;
+}
+
+.copyDiv {
+  position: relative;
+  top: 99px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #ccc;
+}
+
+.copyText {
+  position: relative;
+  top: 0px;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1200px;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  height: auto;
+  min-height: 30px;
+  padding-left: 10px;
+}
+
+.copyText {
+  font-size: 11px;
+  color: #ccc;
+}
+
+.textFoot {
+  width: 350px;
+  height: 40px;
+}
+
+.textFoot p {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.labelLinks {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  color: #666;
+}
+
+.links {
+  font-size: 12px;
+  color: #AAAAAA;
+}
+
+.tabLinks {
+  border-collapse: collapse;
+}
+.msgErro{
+  font-size: 12px;
+  font-weight: bold;
+  color:#ff0000;
+  text-transform: uppercase;
 }

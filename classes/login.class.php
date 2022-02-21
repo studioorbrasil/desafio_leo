@@ -23,7 +23,7 @@ class login extends CRUD{
 
             $get_login = $this->ler(NULL,"WHERE email = '{$this->getEmail()}' AND senha = '{$this->getSenha()}' AND bloq = 1");
 
-
+              $result=[];
             	foreach ($get_login as $usuario) {
                     $result["idu"] = $usuario->id;
                     $result["nome"] = $usuario->nome;
