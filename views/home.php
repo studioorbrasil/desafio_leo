@@ -72,6 +72,30 @@ loadCSS('style');
               </div>
             </nav>
           </header>
+          <div class="mainBanner">
+
+            </div>
+            <div class="containerCursos">
+              <div class="tituloCursos">
+                <h2>Meus cursos</h2>
+              </div>
+              <div class="baseCursos">
+                  <div class="cardCurso">
+                      <div class="bannerCard" style="background-image:url(imagens/bannerCurso.png)!important;background-size:contain;background-repeat:no-repeat"></div>
+                      <div class="txtCurso">
+                        <h2>pellentesque malesuada</h2>
+                        <p>Curabitur blandit tempus portitor. Nulla vitae elit lebero, a pharetra auge.</p>
+                      </div>
+                      <button type="button" name="button">ver curso</button>
+                  </div>
+
+                  <div class="cardCurso addCard">
+                    <div class="bannerCard">
+
+                    </div>
+                  </div>
+              </div>
+            </div>
         </div>
   </body>
 </html>

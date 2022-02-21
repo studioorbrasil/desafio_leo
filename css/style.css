@@ -67,3 +67,335 @@ margin-top: 5px;
  background-image: url(../imagens/logoLeo.png);
  background-size: contain;
 }
+
+.nav:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.navf:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.navContainer {
+  max-width: 1200px;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  /* border: 1px solid #ffa000; */
+  height: 100px;
+}
+
+.footContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  height: 200px;
+}
+
+#logo {
+  width: 111px;
+  height: 52px;
+  margin-top: 23px;
+  /* border: 1px solid #ffa000; */
+}
+
+#logof {
+  width: 111px;
+  height: 52px;
+  margin-top: 30px;
+  opacity: .3;
+  /* border: 1px solid #ffa000; */
+}
+
+.logoFoot {
+  width: 340px;
+  height: 200px;
+  /* border: 1px solid #ffa000; */
+}
+
+.linksFooter {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 420px;
+  height: 200px;
+  /* border: 1px solid #ffa000; */
+  padding-top: 30px;
+}
+
+.navContainer ul {
+  float: right;
+  height: 100px;
+  line-height: 100px;
+  margin: 0;
+}
+
+.navContainer li {
+  list-style: none;
+  float: left;
+  margin: 0 15px;
+}
+
+.divInput {
+  width: 250px;
+  height: 98px;
+  /* border: 1px solid #ffa000;    */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divUser {
+  width: 180px;
+  height: 98px;
+  /* border: 1px solid #ffa000;    */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#inputCx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 248px;
+  height: 40px;
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 22px;
+  -moz-border-radius: 22px;
+  border-radius: 22px;
+}
+
+#psq {
+  width: 185px;
+  height: 30px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.buttonSrc {
+  width: 35px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.buttonSrc:hover {
+  transform: scale(1.2);
+}
+
+input::placeholder {
+  color: #ccc
+}
+
+.tabUser {
+  border-collapse: collapse;
+  border: 1px solid #666;
+  width: 175px;
+  height: 40px;
+}
+
+#td1 {
+  width: 45px;
+  border: 1px solid #666;
+}
+
+#td2 {
+  width: 105px;
+  line-height: 20px;
+  border: 1px solid #666;
+  font-size: 11px;
+}
+
+#td3 {
+  width: 25px;
+  line-height: 20px;
+  border: 1px solid #666;
+}
+
+.baseUser {
+  display: flex;
+  /* border: 1px solid #666; */
+  width: 175px;
+  height: 40px;
+}
+
+.infoUser {
+  /* border: 1px solid #666; */
+  width: 111px;
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: 2px;
+}
+
+#bemVindo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  /* border: 1px solid #666; */
+  width: 112px;
+  height: 14px;
+  line-height: 14px;
+  font-size: 11px;
+  color: #aaa;
+  padding-top: 3px;
+}
+
+#nomeUser {
+  display: flex;
+  align-items: flex-start;
+  /* border: 1px solid #666; */
+  width: 112px;
+  height: 20px;
+  line-height: 18px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+}
+
+.openUser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid #666; */
+  width: 15px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.fotoUser {
+  border: 2px solid #666;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-image: url(../imagens/hugo.png);
+  background-size: contain;
+}
+
+.mainBanner {
+  position: relative;
+  top: 99px;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  height: 300px;
+  background-color: #999999;
+}
+
+.containerCursos {
+  position: relative;
+  top: 99px;
+  left: 0;
+  max-width: 1200px;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  height: auto;
+  min-height: 200px;
+  /* border:1px solid #ff0000; */
+}
+
+.tituloCursos {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 50px;
+  /* border: 1px solid #666; */
+}
+
+.tituloCursos h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #cccccc;
+  width: 99.5%;
+}
+
+.baseCursos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+  /* border:1px solid #00ff00; */
+  margin-top: 20px;
+}
+
+
+.cardCurso {
+    width: 280px;
+    height: 320px;
+    /* border: 1px solid #5022f0; */
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.32);
+    box-shadow: 0px 0px 4px -1px rgb(0 0 0 / 32%);
+}
+.cardCurso button {
+  width: 245px;
+  height: 32px;
+  background-color: #00aa00;
+  -webkit-border-radius: 22px;
+  -moz-border-radius: 22px;
+  border-radius: 22px;
+  border: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+  cursor:pointer;
+}
+.addCard{
+  background-image: url(../imagens/addCurso.png);
+  background-size:contain;
+  border: 2px dashed #ccc;
+  cursor:pointer;
+
+}
+.bannerCard {
+  width: 280px;
+  height: 139px;
+  /* border: 1px solid #00ff00; */
+}
+
+.txtCurso {
+  flex-wrap: wrap;
+  text-align: left;
+  width: 100%;
+  height: auto;
+  min-height: 120px;
+  /* border: 1px solid #00ffd0; */
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+.txtCurso h2 {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.txtCurso p {
+  font-size: 13px;
+  margin-top: 10px;
+  color: #888;
+}
