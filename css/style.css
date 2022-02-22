@@ -668,7 +668,7 @@ footer {
     justify-content: space-around;
     align-items: flex-start;
     width: 340px;
-    height: 200px;
+    height: 160px;
     padding-top: 30px;
   }
 
@@ -736,7 +736,7 @@ footer {
     justify-content: space-around;
     align-items: flex-start;
     width: 340px;
-    height: 200px;
+    height: 150px;
     padding-top: 30px;
   }
 
@@ -857,5 +857,5 @@ footer {
   }
   .tituloCursos {
     padding-left: 10px
-  }  
+  }
 }
