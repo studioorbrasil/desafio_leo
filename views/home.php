@@ -29,6 +29,7 @@ $sessao = new sessao();
 
 $iduser = $sessao->getValor('idu');
 $nomeLoc = $sessao->getValor('nome');
+$modal = $sessao->getValor('modal');
 
 loadCSS('style');
  ?>
@@ -220,7 +221,11 @@ loadCSS('style');
 
 
      <script type="text/javascript">
-        openModal('modal1',"mask");
+        var modal = <?php echo $modal ?>;
+        if(modal==0){
+            openModal('modal1',"mask");
+        }
+
      </script>
   </body>
 </html>

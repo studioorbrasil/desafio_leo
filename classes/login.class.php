@@ -29,6 +29,7 @@ class login extends CRUD{
                     $result["nome"] = $usuario->nome;
                     $result["email"] =  $usuario->email;
                     $result["senha"] =  $usuario->senha;
+                    $result["modal"] =  $usuario->modal;
                     $result["lin"] = $get_login->linhas;
                 }
                 return $result;

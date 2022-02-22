@@ -8,6 +8,7 @@ function openModal(obj,mask){
       setTimeout(function(){
           obj.style.visibility="visible";
           TweenMax.from(obj,1.2,{scale:0, ease: Elastic.easeOut.config(1, 0.75)});
+          modalCheck()//marca a modal como lida
       },1500);
 
 }
@@ -23,5 +24,5 @@ function closeModal(obj,mask){
   setTimeout(function(){
       TweenMax.to(mask,0.5,{autoAlpha:0});
   },1000);
-  modalCheck()//marca a modal como lida
+
 }

@@ -20,7 +20,7 @@
 
             $result = $login->logar();
 
-            if(count($result)>0){//maior que zero quando login bem sucedido
+            if(count($result)>0){// login bem sucedido
 
                 foreach ($result as $key => $dadosSession) {
                     $dadosLogin[$key] = $dadosSession;
@@ -30,6 +30,7 @@
                 $sessao->setValor('nome', $dadosLogin["nome"]);
                 $sessao->setValor('email', $dadosLogin["email"]);
                 $sessao->setValor('senha', $dadosLogin["senha"]);
+                $sessao->setValor('modal', $dadosLogin["modal"]);
 
                 $usuarios->atualizar(array(
                     "acesso"=>date('d/m/Y')." ".date('H:i:s')
