@@ -143,7 +143,7 @@ loadCSS('style');
                   <button type="button" name="button">ver curso</button>
               </div>
 
-              <div class="cardCurso addCard">
+              <div class="cardCurso addCard" onclick="openModal('modal2','mask')">
                 <div class="bannerCard">
 
                 </div>
@@ -165,6 +165,24 @@ loadCSS('style');
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                 <button type="button" class="btBlue" name="button">inscreva-se</button>
               </div>
+            </div>
+        </div>
+        <div class="modalInCurso" id="modal2">
+          <div class="closeModal" onclick="closeModal('modal2','mask')">
+            <span class="material-icons-round">close</span>
+          </div>
+            <div class="tituloInCurso">
+                Inclusão de novo Curso
+            </div>
+
+            <div class="baseForm">
+                  <form action="?m=crud&t=inCurso" method="post">
+                      <input type="text" name="titulo"  value="" class="aparenceForms" placeholder="Titulo do curso">
+                      <textarea name="descricao" rows="8" cols="80" class="aparenceForms" placeholder="Descrição do Curso"></textarea>
+                      <input type="text" name="link" value="" class="aparenceForms" placeholder="Link do Curso">
+                      <input type="hidden" name="img" value="" class="aparenceForms" placeholder="Titulo do curso">
+                      <button type="submit" class="btnCad" name="button">Gravar curso</button>
+                  </form>
             </div>
         </div>
         <footer>

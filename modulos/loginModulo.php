@@ -4,8 +4,8 @@
     case 'login':
             incluirPagina('login',null,'views/');
           break;
-    case 'cadastrar':
-            incluirPagina("addusuario",$dados);
+    case 'incurso':
+            incluirPagina("incurso",$dados);
         break;
     case 'entrar':
             $sessao = new sessao();

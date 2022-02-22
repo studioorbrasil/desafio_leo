@@ -1,26 +1,30 @@
 <?php
 
     switch ($tela) {
-        case 'inserir':
-            $usuarios = new usuarios();
-
-            break;
         case 'inCurso':
-            $cursos = new curso();
+
+            $curso = new curso();
+            $tit =  $_POST['titulo'];
+            $desc =  trim($_POST['descricao']);
+            $img =  $_POST['img'];
+            $link =  trim($_POST['link']);
+            $curso->inserir(array(
+                "titulo"=>$tit,
+                "descricao"=>$desc,
+                "img"=>$img,
+                "linkurl"=>$link
+            ));
 
             break;
 
         case 'checkmodal':
-        // if(isset($_GET['usu']) && $_GET['usu'] != NULL){
             $sessao = new sessao();
             $usuarios = new usuarios();
             $idu = $sessao->getValor('idu');
-            //echo $txtSenha."-".$sessao->getValor('idu');
             $usuarios->atualizar(array(
                 "modal"=>1
             ),'id='.$idu);
-        // }
-        break;
+            break;
     }
 
  ?>
