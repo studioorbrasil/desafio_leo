@@ -9,63 +9,67 @@ html, body {
   padding: 0;
   background-color: #eee;
 }
-*{
+
+* {
   box-sizing: border-box;
 }
+
 h1, h2, h3, h4, h5, p, span {
   margin: 0;
   color: #666;
 }
 
 .campos {
-    width: 90%;
-    height: 30px;
-    padding: 2px 0 0 10px;
-    border-radius: 6px;
-    border: 1px solid #bbb6b6;
-    color: #757575;
-    outline: none;
-    margin-top: 5px;
-    margin-bottom: 5px;
+  width: 90%;
+  height: 30px;
+  padding: 2px 0 0 10px;
+  border-radius: 6px;
+  border: 1px solid #bbb6b6;
+  color: #757575;
+  outline: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-.loginBox{
+.loginBox {
   position: absolute;
-  top:50%;
-  left:50%;
-  width:300px;
+  top: 50%;
+  left: 50%;
+  width: 300px;
   height: 300px;
   margin-left: -150px;
   margin-top: -155px;
   /* border:1px solid #666; */
   display: flex;
   justify-content: center;
-  align-items:flex-start;
+  align-items: flex-start;
   flex-wrap: wrap;
   text-align: center;
   background-color: #fff;
-  -webkit-box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.32);
+  -webkit-box-shadow: 0px 1px 5px -1px rgba(0, 0, 0, 0.32);
   box-shadow: 0px 0px 4px -1px rgb(0 0 0 / 32%);
 }
-.btn{
+
+.btn {
   width: 245px;
-height: 32px;
-background-color: #00aa00;
--webkit-border-radius: 22px;
--moz-border-radius: 22px;
-border-radius: 22px;
-border: none;
-font-size: 12px;
-text-transform: uppercase;
-color: #fff;
-cursor:pointer;
-margin-top: 5px;
+  height: 32px;
+  background-color: #00aa00;
+  -webkit-border-radius: 22px;
+  -moz-border-radius: 22px;
+  border-radius: 22px;
+  border: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 5px;
 }
-.logoBox{
- width:111px;
- height: 52px;
- background-image: url(../imagens/logoLeo.png);
- background-size: contain;
+
+.logoBox {
+  width: 111px;
+  height: 52px;
+  background-image: url(../imagens/logoLeo.png);
+  background-size: contain;
 }
 
 /* container */
@@ -184,6 +188,7 @@ nav {
   justify-content: center;
   align-items: center;
 }
+
 .sanduiche {
   width: 40px;
   height: 98px;
@@ -192,9 +197,11 @@ nav {
   justify-content: center;
   align-items: center;
 }
-.sandExtra{
+
+.sandExtra {
   font-size: 33px;
 }
+
 #inputCx {
   display: flex;
   justify-content: center;
@@ -371,19 +378,19 @@ input::placeholder {
   margin-top: 20px;
 }
 
-
 .cardCurso {
-    width: 280px;
-    height: 320px;
-    /* border: 1px solid #5022f0; */
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-    background-color: #fff;
-    -webkit-box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.32);
-    box-shadow: 0px 0px 4px -1px rgb(0 0 0 / 32%);
+  width: 280px;
+  height: 320px;
+  /* border: 1px solid #5022f0; */
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 1px 5px -1px rgba(0, 0, 0, 0.32);
+  box-shadow: 0px 0px 4px -1px rgb(0 0 0 / 32%);
 }
+
 .cardCurso button {
   width: 245px;
   height: 32px;
@@ -395,15 +402,16 @@ input::placeholder {
   font-size: 12px;
   text-transform: uppercase;
   color: #fff;
-  cursor:pointer;
+  cursor: pointer;
 }
-.addCard{
-  background-image: url(../imagens/addCurso.png);
-  background-size:contain;
-  border: 2px dashed #ccc;
-  cursor:pointer;
 
+.addCard {
+  background-image: url(../imagens/addCurso.png);
+  background-size: contain;
+  border: 2px dashed #ccc;
+  cursor: pointer;
 }
+
 .bannerCard {
   width: 280px;
   height: 139px;
@@ -419,7 +427,6 @@ input::placeholder {
   /* border: 1px solid #00ffd0; */
   padding-left: 10px;
   padding-right: 10px;
-
 }
 
 .txtCurso h2 {
@@ -500,24 +507,62 @@ footer {
 .tabLinks {
   border-collapse: collapse;
 }
-.msgErro{
+
+.msgErro {
   font-size: 12px;
   font-weight: bold;
-  color:#ff0000;
+  color: #ff0000;
   text-transform: uppercase;
 }
 
-@media (min-width: 1601px) {
-
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 
-@media (min-width: 1024px) and (max-width: 1600px) {
-
+.modal1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 444px;
+  margin-left: -400px;
+  margin-top: -222px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  background-image: url(../imagens/backModal.jpg);
+  background-size: cover;
+  z-index: 3;
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-
+.supModal {
+  width: 100%;
+  height: 50%;
 }
+
+.subModal {
+  width: 100%;
+  height: 50%;
+  background-color: #fff;
+  -webkit-border-bottom-right-radius: 12px;
+  -webkit-border-bottom-left-radius: 12px;
+  -moz-border-radius-bottomright: 12px;
+  -moz-border-radius-bottomleft: 12px;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+@media (min-width: 1601px) {}
+
+@media (min-width: 1024px) and (max-width: 1600px) {}
+
+@media (min-width: 768px) and (max-width: 1023px) {}
 
 @media (min-width: 540px) and (max-width: 767px) {
   .divInput {
@@ -527,10 +572,10 @@ footer {
   .divUser {
     display: none;
   }
+
   .sanduiche {
     display: flex;
   }
-
 }
 
 @media (min-width: 415px) and (max-width: 539px) {
@@ -541,6 +586,7 @@ footer {
   .divUser {
     display: none;
   }
+
   .sanduiche {
     display: flex;
   }
@@ -554,6 +600,7 @@ footer {
   .divUser {
     display: none;
   }
+
   .sanduiche {
     display: flex;
   }

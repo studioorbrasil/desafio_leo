@@ -102,9 +102,22 @@ loadCSS('style');
               </div>
           </div>
         </div>
+        <div class="mask">
 
+        </div>
         <div class="modal1">
-
+            <div class="supModal">
+                <div class="closeModal">
+                  <span class="material-icons-round">close</span>
+                </div>
+            </div>
+            <div class="subModal">
+              <div class="contentModal">
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <button type="button" class="btBlue" name="button">inscreva-se</button>
+              </div>
+            </div>
         </div>
         <footer>
           <div class="navf">
