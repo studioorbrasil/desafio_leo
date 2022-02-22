@@ -115,16 +115,20 @@ nav {
   margin-left: auto;
   /* border: 1px solid #ffa000; */
   height: 100px;
+  padding-left: 1px
 }
 
 .footContainer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   max-width: 1200px;
   position: relative;
   margin-right: auto;
   margin-left: auto;
-  height: 200px;
+  height: auto;
+  min-height: 200px;
+  /* border: 1px solid #ffa000; */
 }
 
 #logo {
@@ -358,6 +362,8 @@ input::placeholder {
   width: 100%;
   height: 50px;
   /* border: 1px solid #666; */
+  padding-left: 1px
+
 }
 
 .tituloCursos h2 {
@@ -448,7 +454,8 @@ footer {
   margin-right: auto;
   margin-left: auto;
   width: 100%;
-  height: 200px;
+  height: auto;
+  min-height: 200px;
   background-color: #fff;
 }
 
@@ -523,6 +530,7 @@ footer {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
+  visibility: hidden;
 }
 
 .modal1 {
@@ -541,6 +549,7 @@ footer {
   -webkit-box-shadow: 0px 1px 5px -1px rgba(0, 0, 0, 0.38);
   box-shadow: 0px 1px 4px -1px rgb(0 0 0 / 38%);
   z-index: 3;
+  visibility: hidden;
 }
 
 .supModal {
@@ -553,7 +562,7 @@ footer {
   height: 50%;
   background-color: #fff;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   -webkit-border-bottom-right-radius: 12px;
   -webkit-border-bottom-left-radius: 12px;
@@ -579,7 +588,8 @@ footer {
   border-radius: 50%;
   cursor: pointer;
 }
-.contentModal{
+
+.contentModal {
   width: 60%;
   height: auto;
   min-height: 150px;
@@ -589,16 +599,19 @@ footer {
   align-items: center;
   flex-wrap: wrap;
 }
-.contentModal h2{
+
+.contentModal h2 {
   text-transform: uppercase;
-  color:#000;
+  color: #000;
   font-size: 20px;
 }
-.contentModal p{
+
+.contentModal p {
   font-size: 14px;
-  color:#999;
+  color: #999;
 }
-.btBlue{
+
+.btBlue {
   width: 245px;
   height: 32px;
   background-color: #0099ff;
@@ -611,6 +624,7 @@ footer {
   color: #fff;
   cursor: pointer;
 }
+
 @media (min-width: 1601px) {}
 
 @media (min-width: 1024px) and (max-width: 1600px) {}
@@ -622,25 +636,53 @@ footer {
     margin-left: -300px;
     margin-top: -165.5px;
   }
-    .contentModal{
-      width: 70%;
-      height: auto;
-      min-height: 120px;
-      /* border: 1px solid #ff0000; */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .contentModal h2{
-      text-transform: uppercase;
-      color:#000;
-      font-size: 19px;
-    }
-    .contentModal p{
-      font-size: 14px;
-      color:#999;
-    }
+
+  .contentModal {
+    width: 70%;
+    height: auto;
+    min-height: 120px;
+    /* border: 1px solid #ff0000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .contentModal h2 {
+    text-transform: uppercase;
+    color: #000;
+    font-size: 19px;
+  }
+
+  .contentModal p {
+    font-size: 14px;
+    color: #999;
+  }
+
+  .footContainer {
+    justify-content: center;
+  }
+
+  .linksFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 340px;
+    height: 200px;
+    padding-top: 30px;
+  }
+
+  .logoFoot {
+    width: 340px;
+    height: 150px;
+  }
+
+  .navContainer {
+    padding-left: 12px;
+  }
+  .tituloCursos {
+    padding-left: 10px
+  }
 }
 
 @media (min-width: 540px) and (max-width: 767px) {
@@ -655,34 +697,63 @@ footer {
   .sanduiche {
     display: flex;
   }
+
   .modal1 {
     width: 500px;
     height: 278px;
     margin-left: -250px;
     margin-top: -139px;
   }
-    .contentModal{
-      width: 70%;
-      height: auto;
-      min-height: 120px;
-      /* border: 1px solid #ff0000; */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .contentModal h2{
-      text-transform: uppercase;
-      color:#000;
-      font-size: 18px;
-    }
-    .contentModal p{
-      font-size: 13px;
-      color:#999;
-    }
+
+  .contentModal {
+    width: 70%;
+    height: auto;
+    min-height: 120px;
+    /* border: 1px solid #ff0000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .contentModal h2 {
+    text-transform: uppercase;
+    color: #000;
+    font-size: 18px;
+  }
+
+  .contentModal p {
+    font-size: 13px;
+    color: #999;
+  }
+
+  .footContainer {
+    justify-content: center;
+  }
+
+  .linksFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 340px;
+    height: 200px;
+    padding-top: 30px;
+  }
+
+  .logoFoot {
+    width: 340px;
+    height: 130px;
+  }
+
+  .navContainer {
+    padding-left: 12px;
+  }
+  .tituloCursos {
+    padding-left: 10px
+  }
 }
 
-@media (min-width: 415px) and (max-width: 539px) {
+@media (min-width: 376px) and (max-width: 539px) {
   .divInput {
     display: none;
   }
@@ -694,31 +765,60 @@ footer {
   .sanduiche {
     display: flex;
   }
+
   .modal1 {
     width: 300px;
     height: 541px;
     margin-left: -150px;
     margin-top: -270.5px;
   }
-    .contentModal{
-      width: 75%;
-      height: auto;
-      min-height: 180px;
-      /* border: 1px solid #ff0000; */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .contentModal h2{
-      text-transform: uppercase;
-      color:#000;
-      font-size: 18px;
-    }
-    .contentModal p{
-      font-size: 13px;
-      color:#999;
-    }
+
+  .contentModal {
+    width: 75%;
+    height: auto;
+    min-height: 180px;
+    /* border: 1px solid #ff0000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .contentModal h2 {
+    text-transform: uppercase;
+    color: #000;
+    font-size: 18px;
+  }
+
+  .contentModal p {
+    font-size: 13px;
+    color: #999;
+  }
+
+  .footContainer {
+    justify-content: center;
+  }
+
+  .linksFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 340px;
+    height: 150px;
+    padding-top: 30px;
+  }
+
+  .logoFoot {
+    width: 340px;
+    height: 130px;
+  }
+
+  .navContainer {
+    padding-left: 12px;
+  }
+  .tituloCursos {
+    padding-left: 10px
+  }
 }
 
 @media (max-width: 375px) {
@@ -733,4 +833,29 @@ footer {
   .sanduiche {
     display: flex;
   }
+
+  .footContainer {
+    justify-content: center;
+  }
+
+  .linksFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 340px;
+    height: 150px;
+    padding-top: 30px;
+  }
+
+  .logoFoot {
+    width: 340px;
+    height: 130px;
+  }
+
+  .navContainer {
+    padding-left: 12px;
+  }
+  .tituloCursos {
+    padding-left: 10px
+  }  
 }
