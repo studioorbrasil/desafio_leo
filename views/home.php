@@ -213,6 +213,7 @@ loadCSS('style');
       </div>
     </div>
     <?php
+      loadJS("ajaxModalcheck");
       loadJS("funcoes");
       loadJS("TweenMax");
      ?>

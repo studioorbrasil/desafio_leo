@@ -23,5 +23,5 @@ function closeModal(obj,mask){
   setTimeout(function(){
       TweenMax.to(mask,0.5,{autoAlpha:0});
   },1000);
-
+  modalCheck()//marca a modal como lida
 }
