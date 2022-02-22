@@ -30,7 +30,6 @@ $sessao = new sessao();
 $iduser = $sessao->getValor('idu');
 $nomeLoc = $sessao->getValor('nome');
 
-
 loadCSS('style');
  ?>
 
@@ -94,6 +93,54 @@ loadCSS('style');
                   </div>
                   <button type="button" name="button">ver curso</button>
               </div>
+              <div class="cardCurso">
+                  <div class="bannerCard" style="background-image:url(imagens/bannerCurso.png)!important;background-size:contain;background-repeat:no-repeat"></div>
+                  <div class="txtCurso">
+                    <h2>pellentesque malesuada</h2>
+                    <p>Curabitur blandit tempus portitor. Nulla vitae elit lebero, a pharetra auge.</p>
+                  </div>
+                  <button type="button" name="button">ver curso</button>
+              </div>
+              <div class="cardCurso">
+                  <div class="bannerCard" style="background-image:url(imagens/bannerCurso.png)!important;background-size:contain;background-repeat:no-repeat"></div>
+                  <div class="txtCurso">
+                    <h2>pellentesque malesuada</h2>
+                    <p>Curabitur blandit tempus portitor. Nulla vitae elit lebero, a pharetra auge.</p>
+                  </div>
+                  <button type="button" name="button">ver curso</button>
+              </div>
+              <div class="cardCurso">
+                  <div class="bannerCard" style="background-image:url(imagens/bannerCurso.png)!important;background-size:contain;background-repeat:no-repeat"></div>
+                  <div class="txtCurso">
+                    <h2>pellentesque malesuada</h2>
+                    <p>Curabitur blandit tempus portitor. Nulla vitae elit lebero, a pharetra auge.</p>
+                  </div>
+                  <button type="button" name="button">ver curso</button>
+              </div>
+              <div class="cardCurso">
+                  <div class="bannerCard" style="background-image:url(imagens/bannerCurso.png)!important;background-size:contain;background-repeat:no-repeat"></div>
+                  <div class="txtCurso">
+                    <h2>pellentesque malesuada</h2>
+                    <p>Curabitur blandit tempus portitor. Nulla vitae elit lebero, a pharetra auge.</p>
+                  </div>
+                  <button type="button" name="button">ver curso</button>
+              </div>
+              <div class="cardCurso">
+                  <div class="bannerCard" style="background-image:url(imagens/bannerCurso.png)!important;background-size:contain;background-repeat:no-repeat"></div>
+                  <div class="txtCurso">
+                    <h2>pellentesque malesuada</h2>
+                    <p>Curabitur blandit tempus portitor. Nulla vitae elit lebero, a pharetra auge.</p>
+                  </div>
+                  <button type="button" name="button">ver curso</button>
+              </div>
+              <div class="cardCurso">
+                  <div class="bannerCard" style="background-image:url(imagens/bannerCurso.png)!important;background-size:contain;background-repeat:no-repeat"></div>
+                  <div class="txtCurso">
+                    <h2>pellentesque malesuada</h2>
+                    <p>Curabitur blandit tempus portitor. Nulla vitae elit lebero, a pharetra auge.</p>
+                  </div>
+                  <button type="button" name="button">ver curso</button>
+              </div>
 
               <div class="cardCurso addCard">
                 <div class="bannerCard">
@@ -102,12 +149,12 @@ loadCSS('style');
               </div>
           </div>
         </div>
-        <div class="mask">
+        <div class="mask" id="mask">
 
         </div>
-        <div class="modal1">
+        <div class="modal1" id="modal1">
             <div class="supModal">
-                <div class="closeModal">
+                <div class="closeModal" onclick="closeModal('modal1','mask')">
                   <span class="material-icons-round">close</span>
                 </div>
             </div>
@@ -165,5 +212,14 @@ loadCSS('style');
         </div>
       </div>
     </div>
+    <?php
+      loadJS("funcoes");
+      loadJS("TweenMax");
+     ?>
+
+
+     <script type="text/javascript">
+        openModal('modal1',"mask");
+     </script>
   </body>
 </html>

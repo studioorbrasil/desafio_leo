@@ -395,6 +395,7 @@ input::placeholder {
   background-color: #fff;
   -webkit-box-shadow: 0px 1px 5px -1px rgba(0, 0, 0, 0.32);
   box-shadow: 0px 0px 4px -1px rgb(0 0 0 / 32%);
+
 }
 
 .cardCurso button {
@@ -832,7 +833,34 @@ footer {
 
   .sanduiche {
     display: flex;
-  }
+  }  .modal1 {
+      width: 300px;
+      height: 541px;
+      margin-left: -150px;
+      margin-top: -270.5px;
+    }
+
+    .contentModal {
+      width: 75%;
+      height: auto;
+      min-height: 180px;
+      /* border: 1px solid #ff0000; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .contentModal h2 {
+      text-transform: uppercase;
+      color: #000;
+      font-size: 18px;
+    }
+
+    .contentModal p {
+      font-size: 13px;
+      color: #999;
+    }
 
   .footContainer {
     justify-content: center;
