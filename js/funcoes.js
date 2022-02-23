@@ -17,8 +17,9 @@ function openModal(obj, mask) {
   TweenMax.to(obj, 0.7, {
     scale: 1,
     ease: Elastic.easeOut.config(0.75, 0.75)
-  });
 
+  });
+  modalCheck();
 }
 
 function closeModal(obj, mask) {

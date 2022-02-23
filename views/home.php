@@ -177,23 +177,23 @@ loadCSS('style');
 
             <div class="baseForm">
                   <form action="?m=crud&t=inCurso" method="post">
-                      <input type="text" name="titulo"  value="" class="aparenceForms" placeholder="Titulo do curso">
-                      <textarea name="descricao" rows="8" cols="80" class="aparenceForms" placeholder="Descrição do Curso"></textarea>
-                      <input type="text" name="link" value="" class="aparenceForms" placeholder="Link do Curso">
+                      <input type="text" name="titulo" id="titulo"  value="" class="aparenceForms" placeholder="Titulo do curso"  onkeyup="liberaSubmit()">
+                      <textarea name="descricao" rows="8" id="descricao" cols="80" class="aparenceForms" placeholder="Descrição do Curso"  onkeyup="liberaSubmit()"></textarea>
+                      <input type="text" name="link" value="" id="link" class="aparenceForms" placeholder="Link do Curso"  onkeyup="liberaSubmit()">
                       <input type="text" name="img" id="pathHidden" value="" class="aparenceForms">
-                      <div class="frameImg">
-                        <div id="tab2" class="tabcontent">
-                            <form name="imgForm" method="POST" action="?m=arquivos&t=processaImg" enctype="multipart/form-data" target="iFramex">
-                            <label for="pic"></label>
-                            <input type="file" id="pic" name="pic" accept="image/*" class="fileInput" onchange="javascript:imgForm.submit()">
-                             <!-- <button type="submit"  class="btOK">Enviar imagem</button> -->
-                            </form>
-                            <iframe src="" action="processaImg.php" width="" height="" name="iFramex" class="iFrameUpload" frameborder="1"></iframe>
-                        </div>
-                      </div>
+
                       <button type="submit" class="btnCad" name="button">Gravar curso</button>
                   </form>
+                  <div class="frameImg">
 
+                        <form name="imgForm" method="POST" action="?m=arquivos&t=processaImg" enctype="multipart/form-data" target="iFramex">
+                        <label for="pic"></label>
+                        <input type="file" id="pic" name="pic" accept="image/*" class="fileInput" onchange="javascript:imgForm.submit(),liberaSubmit();">
+                         <!-- <button type="submit"  class="btOK">Enviar imagem</button> -->
+                        </form>
+                        <iframe src="" action="processaImg.php" width="" height="" name="iFramex" class="iFrameUpload" frameborder="1"></iframe>
+
+                  </div>
             </div>
 
         </div>
@@ -251,6 +251,31 @@ loadCSS('style');
 
 
      <script type="text/javascript">
+
+     function liberaSubmit(){
+
+         var bt = document.getElementById('btOK');
+         var titulo = document.getElementById("titulo");
+         var descricao = document.getElementById("descricao");
+         var link = document.getElementById("link");
+         var pathHidden = document.getElementById("pathHidden");
+
+         setInterval(function(){
+             if(titulo.value != "" && descricao.value != "" && link.value != "" && pathHidden.value != ""){
+
+                 bt.classList.remove("btnCadOff");
+                 bt.classList.add("btnCad");
+                 bt.disabled=false;
+             }else{
+                 bt.classList.remove("btnCad");
+                 bt.classList.add("btnCadOff");
+                 bt.disabled=true;
+             }
+
+         },1000);
+     }
+
+
         var modal = <?php echo $modal ?>;
         if(modal==0){
             openModal('modal1',"mask");

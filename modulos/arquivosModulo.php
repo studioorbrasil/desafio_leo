@@ -3,8 +3,9 @@
     case 'processaImg':
         incluirPagina('processaImg',null,'views/');
         break;
+        default:
+            echo "Arquivo não encontrado";
+            break;
   }
-  default:
-      echo "Arquivo não encontrado";
-      break;
+
 ?>

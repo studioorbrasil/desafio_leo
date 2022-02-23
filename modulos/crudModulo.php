@@ -4,7 +4,7 @@
         case 'inCurso':
 
             $curso = new curso();
-            $tit =  $_POST['titulo'];
+            $tit = trim($_POST['titulo']);
             $desc =  trim($_POST['descricao']);
             $img =  $_POST['img'];
             $link =  trim($_POST['link']);
