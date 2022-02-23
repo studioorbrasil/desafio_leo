@@ -24,6 +24,8 @@ function openModal(obj, mask) {
 
 function closeModal(obj, mask) {
   var campos = document.querySelectorAll('.aparenceForms');
+  var iframeImg = document.getElementById('iframeImg');
+  var pic = document.getElementById('pic');
   console.log(campos);
   var obj = document.getElementById(obj);
   var mask = document.getElementById(mask);
@@ -45,7 +47,8 @@ function closeModal(obj, mask) {
     for (var i = 0; i < campos.length; i++) {
       campos[i].value = "";
     }
-
+    pic.value="";
+    iframeImg.src="";
   }, 500);
 }
 

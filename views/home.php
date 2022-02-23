@@ -185,7 +185,7 @@ loadCSS('style');
                         <input type="file" id="pic" name="pic" accept="image/*" class="fileInput" onchange="javascript:imgForm.submit(),liberaSubmit();">
                          <!-- <button type="submit"  class="btOK">Enviar imagem</button> -->
                         </form>
-                        <iframe src="" action="processaImg.php" width="" height="" name="iFramex" class="iFrameUpload" frameborder="1"></iframe>
+                        <iframe src="" action="processaImg.php" width="" height="" name="iFramex" id="iframeImg" class="iFrameUpload" frameborder="1"></iframe>
                   </div>
                     <button type="submit" id="btGravar" class="btnCadOff" onclick="save()" disabled name="button">Gravar curso</button>
             </div>
