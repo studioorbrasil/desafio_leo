@@ -176,13 +176,11 @@ loadCSS('style');
             </div>
 
             <div class="baseForm">
-                  <form action="?m=crud&t=inCurso" method="post">
+                  <form id="formCurso" action="?m=crud&t=inCurso" method="post">
                       <input type="text" name="titulo" id="titulo"  value="" class="aparenceForms" placeholder="Titulo do curso"  onkeyup="liberaSubmit()">
                       <textarea name="descricao" rows="8" id="descricao" cols="80" class="aparenceForms" placeholder="Descrição do Curso"  onkeyup="liberaSubmit()"></textarea>
                       <input type="text" name="link" value="" id="link" class="aparenceForms" placeholder="Link do Curso"  onkeyup="liberaSubmit()">
-                      <input type="text" name="img" id="pathHidden" value="" class="aparenceForms">
-
-                      <button type="submit" class="btnCad" name="button">Gravar curso</button>
+                      <input type="hidden" name="img" id="pathHidden" value="" class="aparenceForms">
                   </form>
                   <div class="frameImg">
 
@@ -192,8 +190,8 @@ loadCSS('style');
                          <!-- <button type="submit"  class="btOK">Enviar imagem</button> -->
                         </form>
                         <iframe src="" action="processaImg.php" width="" height="" name="iFramex" class="iFrameUpload" frameborder="1"></iframe>
-
                   </div>
+                    <button type="submit" id="btGravar" class="btnCadOff" disabled name="button">Gravar curso</button>
             </div>
 
         </div>
@@ -254,7 +252,7 @@ loadCSS('style');
 
      function liberaSubmit(){
 
-         var bt = document.getElementById('btOK');
+         var bt = document.getElementById('btGravar');
          var titulo = document.getElementById("titulo");
          var descricao = document.getElementById("descricao");
          var link = document.getElementById("link");
@@ -275,7 +273,10 @@ loadCSS('style');
          },1000);
      }
 
-
+     function grava(){
+        var formCurso = document.getElementById('formCurso');
+        formCurso.submit();
+     }
         var modal = <?php echo $modal ?>;
         if(modal==0){
             openModal('modal1',"mask");
