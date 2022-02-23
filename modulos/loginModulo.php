@@ -1,5 +1,5 @@
 <?php
-
+  $dados="";
   switch ($tela) {
     case 'login':
             incluirPagina('login',null,'views/');

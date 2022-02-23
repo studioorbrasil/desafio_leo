@@ -1,6 +1,7 @@
 <?php
 $sessao = new sessao();
  include "verifica.php";
+ $idc="";
  ?>
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
@@ -26,10 +27,25 @@ $sessao = new sessao();
             rel="stylesheet">
 
 <?php
-$psq = $_GET['psq'];
+$idc = $_GET['id'];
 $iduser = $sessao->getValor('idu');
 $nomeLoc = $sessao->getValor('nome');
 $modal = $sessao->getValor('modal');
+
+$cursosobj = new curso();
+
+  $where = "where id = $idc";
+  $cursos = $cursosobj->listar("id,titulo,descricao,img,linkurl",$where);
+
+  if($cursosobj->linhas > 0){
+      foreach ($cursos as $curs){
+        $titulo = $curs['titulo'];
+        $desccur = $curs['descricao'];
+        $link = $curs['linkurl'];
+        $img = $curs['img'];
+      }
+}
+
 
 loadCSS('style');
  ?>
@@ -78,72 +94,19 @@ loadCSS('style');
                 </div>
             </nav>
         </header>
-        <div class="mainBanner">
 
-        </div>
         <div class="containerCursos">
           <div class="tituloCursos">
             <h2>Meus cursos</h2>
           </div>
-          <div class="baseCursos">
+          <div class="baseViewCursos">
 
-              <?php
-
-              $cursosobj = new curso();
-              $cont=0;
-              $where =  "WHERE 1";
-              if($psq!=""){
-                $where = "where descricao LIKE '%$psq%' ORDER BY id DESC";
-                $cursos = $cursosobj->listar("id,titulo,descricao,img,linkurl",$where);
-              }else{
-                $cursos = $cursosobj->listar("id,titulo,descricao,img,linkurl",$where);
-              }
-                if($cursosobj->linhas > 0){
-                    foreach ($cursos as $curs){
-                      $id = $curs['id'];
-                      $titulo = $curs['titulo'];
-                      $desccur = $curs['descricao'];
-                      $link = $curs['linkurl'];
-                      $img = $curs['img'];
-
-               ?>
-
-              <div class="cardCurso">
-                  <div class="bannerCard" style="background-image:url(<?php echo $img ;?>)!important;background-size:cover;background-repeat:no-repeat"></div>
-                  <div class="txtCurso">
-                    <h2><?php echo $titulo ?></h2>
-                    <p><?php echo $desccur ?></p>
-                  </div>
-                  <button type="button" name="button" onclick="lnks('?m=login&t=incurso&id=<?php echo $id; ?>')">ver curso</button>
+              <div class="capa">
+                  <img src="<?php echo $img ?>" alt="">
+                  <?php echo $link; ?>
               </div>
-
-              <?php
-                 $cont++;
-                 }
-               }else{
-              ?>
-              <?php
-                  if($psq!=""){
-              ?>
-                 <div class="feedLine">
-                   Não foi encontrado cursos com as palavras: <strong><?php echo $psq ?></strong>
-                 </div>
-              <?php
-                }else{
-              ?>
-                 <div class="feedLine">
-                   Não há cursos.
-                 </div>
-              <?php
-                }
-              }
-              ?>
-
-
-              <div class="cardCurso addCard" onclick="openModal('modal2','mask')">
-                <div class="bannerCard">
-
-                </div>
+              <div class="player">
+                    <iframe  id="iframeY" src="<?php echo $link; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
           </div>
         </div>
