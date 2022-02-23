@@ -47,7 +47,7 @@ loadCSS('style');
                             <div class="divInput">
                                 <div id="inputCx">
                                     <input type="text" placeholder="Pesquisar cursos..." id="psq"  onkeypress="startBuscaCurso()">
-                                    <button class="buttonSrc">
+                                    <button class="buttonSrc" onclick="startBuscaCurso()">
                                         <span class="material-icons">search</span>
                                     </button>
                                 </div>
