@@ -97,17 +97,19 @@ loadCSS('style');
 
         <div class="containerCursos">
           <div class="tituloCursos">
-            <h2>Meus cursos</h2>
+            <h2><?php echo $titulo ?></h2>
           </div>
           <div class="baseViewCursos">
 
-              <div class="capa">
-                  <img src="<?php echo $img ?>" alt="">
-                  <?php echo $link; ?>
+              <div class="capa" style="background-image:url(<?php echo $img ;?>)!important;background-size:cover;background-repeat:no-repeat">
+
               </div>
               <div class="player">
                     <iframe  id="iframeY" src="<?php echo $link; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
+          </div>
+          <div class="acoes">
+
           </div>
         </div>
         <div class="mask" id="mask">

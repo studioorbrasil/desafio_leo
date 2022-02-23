@@ -385,12 +385,12 @@ input::placeholder {
 }
 .baseViewCursos {
   display: flex;
-  justify-content: center;
+  justify-content:space-around;
   flex-wrap: wrap;
   width: 100%;
   height: auto;
   min-height: 100px;
-  /* border:1px solid #00ff00; */
+  border:1px solid #00ff00;
   margin-top: 20px;
 }
 
@@ -429,10 +429,19 @@ input::placeholder {
   border: 2px dashed #ccc;
   cursor: pointer;
 }
-
+#iframeY{
+    border-radius: 13px;
+    width: 500px;
+    height: 281px;
+}
 .bannerCard {
   width: 280px;
   height: 139px;
+  /* border: 1px solid #00ff00; */
+}
+.capa {
+  width: 500px;
+  height: 281px;
   /* border: 1px solid #00ff00; */
 }
 
