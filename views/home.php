@@ -46,7 +46,7 @@ loadCSS('style');
                         <li>
                             <div class="divInput">
                                 <div id="inputCx">
-                                    <input type="text" placeholder="Pesquisar cursos..." id="psq">
+                                    <input type="text" placeholder="Pesquisar cursos..." id="psq"  onkeypress="startBuscaCurso()">
                                     <button class="buttonSrc">
                                         <span class="material-icons">search</span>
                                     </button>
@@ -89,7 +89,8 @@ loadCSS('style');
 
               <?php
 
-              $cursosobj = new cursos();
+              $cursosobj = new curso();
+              $cont=0;
               $where =  "WHERE 1";
               if($psq!=""){
                 $where = "where descricao LIKE '%$psq%' ORDER BY id DESC";
@@ -102,29 +103,42 @@ loadCSS('style');
                       $titulo = $curs['titulo'];
                       $desccur = $curs['descricao'];
                       $link = $curs['linkurl'];
+                      $img = $curs['img'];
 
                ?>
 
               <div class="cardCurso">
-                  <div class="bannerCard" style="background-image:url(imagens/bannerCurso.png)!important;background-size:contain;background-repeat:no-repeat"></div>
+                  <div class="bannerCard" style="background-image:url(<?php echo $img ;?>)!important;background-size:cover;background-repeat:no-repeat"></div>
                   <div class="txtCurso">
-                    <h2>pellentesque malesuada</h2>
-                    <p>Curabitur blandit tempus portitor. Nulla vitae elit lebero, a pharetra auge.</p>
+                    <h2><?php echo $titulo ?></h2>
+                    <p><?php echo $desccur ?></p>
                   </div>
                   <button type="button" name="button">ver curso</button>
               </div>
 
               <?php
-              $cont++;
-            }else{
-            ?>
-            <div class="feedLine">
-                Não foi encontrado cursos com as palavras: <strong><?php echo $psq ?></strong>
-            </div>
-            <?php
-            }
+                 $cont++;
+                 }
+               }else{
+              ?>
+              <?php
+                  if($psq!=""){
+              ?>
+                 <div class="feedLine">
+                   Não foi encontrado cursos com as palavras: <strong><?php echo $psq ?></strong>
+                 </div>
+              <?php
+                }else{
+              ?>
+                 <div class="feedLine">
+                   Não há cursos.
+                 </div>
+              <?php
+                }
+              }
+              ?>
 
-               ?>
+
               <div class="cardCurso addCard" onclick="openModal('modal2','mask')">
                 <div class="bannerCard">
 

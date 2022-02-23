@@ -79,3 +79,18 @@ function save(){
    var formCurso = document.getElementById('formCurso');
    formCurso.submit();
 }
+function startBuscaCurso(e) {
+    var psq = document.getElementById('psq').value;
+    if (window.event.type == "keypress") {
+        e = e || window.event;
+        var key = e.keyCode
+
+        if (key == 13) {
+            window.location = "?m=login&t=home&psq=" + psq;
+        }
+    } else {
+        if (psq != "") {
+            window.location = "?m=login&t=home&psq=" + psq;
+        }
+    }
+}
