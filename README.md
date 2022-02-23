@@ -12,5 +12,5 @@
 
 <h1 align="center">Instruções</h1>
 
-<p>Banco de dados na pasta banco</p><br>
+<p>Banco de dados na pasta banco:banco</p><br>
 <p>Link de Visualização</p><br>
