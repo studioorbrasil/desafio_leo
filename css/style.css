@@ -538,9 +538,9 @@ footer {
   top: 50%;
   left: 50%;
   width: 700px;
-  height: 389px;
+  height: 500px;
   margin-left: -350px;
-  margin-top: -194.5px;
+  margin-top: -250px;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
   border-radius: 12px;
@@ -548,7 +548,7 @@ footer {
   -webkit-box-shadow: 0px 1px 5px -1px rgba(0, 0, 0, 0.38);
   box-shadow: 0px 1px 4px -1px rgb(0 0 0 / 38%);
   z-index: 3;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 .btnCad{
   width: 245px;
@@ -571,7 +571,7 @@ footer {
   flex-wrap: wrap;
   text-align: center;
   width: 100%;
-  height: 290px;
+  height: 370px;
   margin-top: 30px;
   /* border: 1px solid #ff0000; */
 }
@@ -590,7 +590,26 @@ footer {
   /* border: 1px solid #ff0000; */
   padding-left: 30px;
 }
-
+.frameImg{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+  height: 180px;
+  margin-top: 2px;
+  /* border: 1px solid #ff00f0; */
+}
+.iFrameUpload{
+  width:50%;
+  height: 137px;
+  border: 1px solid #000;
+}
+.fileInput{
+  width: 350px;
+  margin-bottom: 3px;
+}
 .modal1 {
   position: fixed;
   top: 50%;
@@ -647,7 +666,23 @@ footer {
   border-radius: 50%;
   cursor: pointer;
 }
-
+.closeModal2 {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  float: right;
+  top: -20px;
+  right: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border:1px solid #AAA;
+  cursor: pointer;
+}
 .contentModal {
   width: 60%;
   height: auto;
@@ -749,6 +784,25 @@ footer {
   .tituloCursos {
     padding-left: 10px
   }
+  .modalInCurso {
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    height: 520px;
+    margin-left: -350px;
+    margin-top: -260px;
+
+    /* visibility: hidden; */
+  }
+  .baseForm{
+    width: 100%;
+    height: 430px;
+  }
+  .frameImg{
+    width: 100%;
+    height: 180px;
+
+  }
 }
 
 @media (min-width: 540px) and (max-width: 767px) {
@@ -816,6 +870,18 @@ footer {
   }
   .tituloCursos {
     padding-left: 10px
+  }
+  .modalInCurso {
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 460px;
+    margin-left: -250px;
+    margin-top: -230px;
+  }
+  .baseForm{
+    width: 100%;
+    height: 300px;
   }
 }
 
@@ -885,6 +951,23 @@ footer {
   .tituloCursos {
     padding-left: 10px
   }
+  .modalInCurso {
+    top: 50%;
+    left: 50%;
+    width: 360px;
+    height: 500px;
+    margin-left: -180px;
+    margin-top: -250px;
+  }
+  .baseForm{
+    width: 100%;
+    height: 300px;
+  }
+  .frameImg{
+    width: 100%;
+    height: 180px;
+
+  }
 }
 
 @media (max-width: 375px) {
@@ -950,5 +1033,17 @@ footer {
   }
   .tituloCursos {
     padding-left: 10px
+  }
+  .modalInCurso {
+    top: 50%;
+    left: 50%;
+    width: 340px;
+    height: 500px;
+    margin-left: -170px;
+    margin-top: -250px;
+  }
+  .baseForm{
+    width: 100%;
+    height: 300px;
   }
 }

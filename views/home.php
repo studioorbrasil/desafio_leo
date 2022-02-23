@@ -168,7 +168,7 @@ loadCSS('style');
             </div>
         </div>
         <div class="modalInCurso" id="modal2">
-          <div class="closeModal" onclick="closeModal('modal2','mask')">
+          <div class="closeModal2" onclick="closeModal('modal2','mask')">
             <span class="material-icons-round">close</span>
           </div>
             <div class="tituloInCurso">
@@ -180,10 +180,22 @@ loadCSS('style');
                       <input type="text" name="titulo"  value="" class="aparenceForms" placeholder="Titulo do curso">
                       <textarea name="descricao" rows="8" cols="80" class="aparenceForms" placeholder="Descrição do Curso"></textarea>
                       <input type="text" name="link" value="" class="aparenceForms" placeholder="Link do Curso">
-                      <input type="hidden" name="img" value="" class="aparenceForms" placeholder="Titulo do curso">
+                      <input type="text" name="img" id="pathHidden" value="" class="aparenceForms">
+                      <div class="frameImg">
+                        <div id="tab2" class="tabcontent">
+                            <form name="imgForm" method="POST" action="?m=arquivos&t=processaImg" enctype="multipart/form-data" target="iFramex">
+                            <label for="pic"></label>
+                            <input type="file" id="pic" name="pic" accept="image/*" class="fileInput" onchange="javascript:imgForm.submit()">
+                             <!-- <button type="submit"  class="btOK">Enviar imagem</button> -->
+                            </form>
+                            <iframe src="" action="processaImg.php" width="" height="" name="iFramex" class="iFrameUpload" frameborder="1"></iframe>
+                        </div>
+                      </div>
                       <button type="submit" class="btnCad" name="button">Gravar curso</button>
                   </form>
+
             </div>
+
         </div>
         <footer>
           <div class="navf">
