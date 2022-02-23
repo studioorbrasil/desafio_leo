@@ -7,6 +7,9 @@
     case 'incurso':
             incluirPagina("incurso",$dados);
         break;
+    case 'edit':
+            incluirPagina("editar",$dados);
+        break;
     case 'entrar':
             $sessao = new sessao();
             $usuarios = new usuarios();

@@ -68,49 +68,13 @@ loadCSS('style');
           </div>
           <div class="baseViewCursos">
 
-              <div class="capa" style="background-image:url(<?php echo $img ;?>)!important;background-size:cover;background-repeat:no-repeat">
-
-              </div>
-              <div class="player">
-                    <iframe  id="iframeY" src="<?php echo $link; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-          </div>
-          <div class="acoes">
-             <button type="button" class="btAcao" name="button" onclick="lnks('?m=login&t=edit&id=<?php echo $idc?>')">Editar Curso</button>
-             <button type="button" class="btAcao" name="button" onclick="lnks('?m=crud&t=del&id=<?php echo $idc?>')">Excluir Curso</button>
-          </div>
-        </div>
-        <div class="mask" id="mask">
-
-        </div>
-        <div class="modal1" id="modal1">
-            <div class="supModal">
-                <div class="closeModal" onclick="closeModal('modal1','mask')">
-                  <span class="material-icons-round">close</span>
-                </div>
-            </div>
-            <div class="subModal">
-              <div class="contentModal">
-                <h2>Lorem ipsum dolor sit amet</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                <button type="button" class="btBlue" name="button">inscreva-se</button>
-              </div>
-            </div>
-        </div>
-        <div class="modalInCurso" id="modal2">
-          <div class="closeModal2" onclick="closeModal('modal2','mask')">
-            <span class="material-icons-round">close</span>
-          </div>
-            <div class="tituloInCurso">
-                Edição de  Curso
-            </div>
-
-            <div class="baseForm">
-                  <form id="formCurso" action="?m=crud&t=inCurso" method="post">
-                      <input type="text" name="titulo" id="titulo"  value="" class="aparenceForms" placeholder="Titulo do curso"  onkeyup="liberaSubmit()">
-                      <textarea name="descricao" rows="8" id="descricao" cols="80" class="aparenceForms" placeholder="Descrição do Curso"  onkeyup="liberaSubmit()"></textarea>
-                      <input type="text" name="link" value="" id="link" class="aparenceForms" placeholder="Link do Curso"  onkeyup="liberaSubmit()">
-                      <input type="hidden" name="img" id="pathHidden" value="" class="aparenceForms">
+            <div class="baseFormEdit">
+                  <form id="formCurso" action="?m=crud&t=edit" method="post">
+                      <input type="text" name="titulo" id="titulo"  value="<?php echo $titulo ?>" class="aparenceForms" placeholder="Titulo do curso"  onkeyup="liberaSubmit()">
+                      <textarea name="descricao" rows="8" id="descricao" cols="80" class="aparenceForms" placeholder="Descrição do Curso"  onkeyup="liberaSubmit()"><?php echo $desccur ?></textarea>
+                      <input type="text" name="link" value="<?php echo $link ?>" id="link" class="aparenceForms" placeholder="Link do Curso"  onkeyup="liberaSubmit()">
+                      <input type="hidden" name="id" id="id" value="<?php echo $idc ?>" class="aparenceForms">
+                      <input type="hidden" name="img" id="pathHidden" value="<?php echo $img ?>" class="aparenceForms">
                   </form>
                   <div class="frameImg">
 
@@ -121,10 +85,17 @@ loadCSS('style');
                         </form>
                         <iframe src="" action="processaImg.php" width="" height="" name="iFramex" id="iframeImg" class="iFrameUpload" frameborder="1"></iframe>
                   </div>
-                    <button type="submit" id="btGravar" class="btnCadOff" onclick="save()" disabled name="button">Gravar curso</button>
+                    <button type="submit" id="btGravar" class="btnCad" onclick="save()"  name="button">Atualizar curso</button>
             </div>
 
+          </div>
+
         </div>
+        <div class="mask" id="mask">
+
+        </div>
+
+
         <footer>
           <div class="navf">
             <div class="footContainer">
