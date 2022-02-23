@@ -26,7 +26,7 @@ $sessao = new sessao();
             rel="stylesheet">
 
 <?php
-
+$psq = $_GET['psq'];
 $iduser = $sessao->getValor('idu');
 $nomeLoc = $sessao->getValor('nome');
 $modal = $sessao->getValor('modal');
@@ -86,54 +86,25 @@ loadCSS('style');
             <h2>Meus cursos</h2>
           </div>
           <div class="baseCursos">
-              <div class="cardCurso">
-                  <div class="bannerCard" style="background-image:url(imagens/bannerCurso.png)!important;background-size:contain;background-repeat:no-repeat"></div>
-                  <div class="txtCurso">
-                    <h2>pellentesque malesuada</h2>
-                    <p>Curabitur blandit tempus portitor. Nulla vitae elit lebero, a pharetra auge.</p>
-                  </div>
-                  <button type="button" name="button">ver curso</button>
-              </div>
-              <div class="cardCurso">
-                  <div class="bannerCard" style="background-image:url(imagens/bannerCurso.png)!important;background-size:contain;background-repeat:no-repeat"></div>
-                  <div class="txtCurso">
-                    <h2>pellentesque malesuada</h2>
-                    <p>Curabitur blandit tempus portitor. Nulla vitae elit lebero, a pharetra auge.</p>
-                  </div>
-                  <button type="button" name="button">ver curso</button>
-              </div>
-              <div class="cardCurso">
-                  <div class="bannerCard" style="background-image:url(imagens/bannerCurso.png)!important;background-size:contain;background-repeat:no-repeat"></div>
-                  <div class="txtCurso">
-                    <h2>pellentesque malesuada</h2>
-                    <p>Curabitur blandit tempus portitor. Nulla vitae elit lebero, a pharetra auge.</p>
-                  </div>
-                  <button type="button" name="button">ver curso</button>
-              </div>
-              <div class="cardCurso">
-                  <div class="bannerCard" style="background-image:url(imagens/bannerCurso.png)!important;background-size:contain;background-repeat:no-repeat"></div>
-                  <div class="txtCurso">
-                    <h2>pellentesque malesuada</h2>
-                    <p>Curabitur blandit tempus portitor. Nulla vitae elit lebero, a pharetra auge.</p>
-                  </div>
-                  <button type="button" name="button">ver curso</button>
-              </div>
-              <div class="cardCurso">
-                  <div class="bannerCard" style="background-image:url(imagens/bannerCurso.png)!important;background-size:contain;background-repeat:no-repeat"></div>
-                  <div class="txtCurso">
-                    <h2>pellentesque malesuada</h2>
-                    <p>Curabitur blandit tempus portitor. Nulla vitae elit lebero, a pharetra auge.</p>
-                  </div>
-                  <button type="button" name="button">ver curso</button>
-              </div>
-              <div class="cardCurso">
-                  <div class="bannerCard" style="background-image:url(imagens/bannerCurso.png)!important;background-size:contain;background-repeat:no-repeat"></div>
-                  <div class="txtCurso">
-                    <h2>pellentesque malesuada</h2>
-                    <p>Curabitur blandit tempus portitor. Nulla vitae elit lebero, a pharetra auge.</p>
-                  </div>
-                  <button type="button" name="button">ver curso</button>
-              </div>
+
+              <?php
+
+              $cursosobj = new cursos();
+              $where =  "WHERE 1";
+              if($psq!=""){
+                $where = "where descricao LIKE '%$psq%' ORDER BY id DESC";
+                $cursos = $cursosobj->listar("id,titulo,descricao,img,linkurl",$where);
+              }else{
+                $cursos = $cursosobj->listar("id,titulo,descricao,img,linkurl",$where);
+              }
+                if($cursosobj->linhas > 0){
+                    foreach ($cursos as $curs){
+                      $titulo = $curs['titulo'];
+                      $desccur = $curs['descricao'];
+                      $link = $curs['linkurl'];
+
+               ?>
+
               <div class="cardCurso">
                   <div class="bannerCard" style="background-image:url(imagens/bannerCurso.png)!important;background-size:contain;background-repeat:no-repeat"></div>
                   <div class="txtCurso">
@@ -143,6 +114,17 @@ loadCSS('style');
                   <button type="button" name="button">ver curso</button>
               </div>
 
+              <?php
+              $cont++;
+            }else{
+            ?>
+            <div class="feedLine">
+                Não foi encontrado cursos com as palavras: <strong><?php echo $psq ?></strong>
+            </div>
+            <?php
+            }
+
+               ?>
               <div class="cardCurso addCard" onclick="openModal('modal2','mask')">
                 <div class="bannerCard">
 
