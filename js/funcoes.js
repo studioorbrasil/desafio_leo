@@ -52,3 +52,30 @@ function closeModal(obj, mask) {
 function lnks(lnk) {
   window.location = lnk;
 }
+function liberaSubmit(){
+
+    var bt = document.getElementById('btGravar');
+    var titulo = document.getElementById("titulo");
+    var descricao = document.getElementById("descricao");
+    var link = document.getElementById("link");
+    var pathHidden = document.getElementById("pathHidden");
+
+    setInterval(function(){
+        if(titulo.value != "" && descricao.value != "" && link.value != "" && pathHidden.value != ""){
+
+            bt.classList.remove("btnCadOff");
+            bt.classList.add("btnCad");
+            bt.disabled=false;
+        }else{
+            bt.classList.remove("btnCad");
+            bt.classList.add("btnCadOff");
+            bt.disabled=true;
+        }
+
+    },1000);
+}
+
+function save(){
+   var formCurso = document.getElementById('formCurso');
+   formCurso.submit();
+}

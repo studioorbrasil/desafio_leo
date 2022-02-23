@@ -15,6 +15,8 @@
                 "linkurl"=>$link
             ));
 
+            header("Location:?m=login&t=home");
+
             break;
 
         case 'checkmodal':

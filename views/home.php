@@ -191,7 +191,7 @@ loadCSS('style');
                         </form>
                         <iframe src="" action="processaImg.php" width="" height="" name="iFramex" class="iFrameUpload" frameborder="1"></iframe>
                   </div>
-                    <button type="submit" id="btGravar" class="btnCadOff" disabled name="button">Gravar curso</button>
+                    <button type="submit" id="btGravar" class="btnCadOff" onclick="save()" disabled name="button">Gravar curso</button>
             </div>
 
         </div>
@@ -250,33 +250,6 @@ loadCSS('style');
 
      <script type="text/javascript">
 
-     function liberaSubmit(){
-
-         var bt = document.getElementById('btGravar');
-         var titulo = document.getElementById("titulo");
-         var descricao = document.getElementById("descricao");
-         var link = document.getElementById("link");
-         var pathHidden = document.getElementById("pathHidden");
-
-         setInterval(function(){
-             if(titulo.value != "" && descricao.value != "" && link.value != "" && pathHidden.value != ""){
-
-                 bt.classList.remove("btnCadOff");
-                 bt.classList.add("btnCad");
-                 bt.disabled=false;
-             }else{
-                 bt.classList.remove("btnCad");
-                 bt.classList.add("btnCadOff");
-                 bt.disabled=true;
-             }
-
-         },1000);
-     }
-
-     function grava(){
-        var formCurso = document.getElementById('formCurso');
-        formCurso.submit();
-     }
         var modal = <?php echo $modal ?>;
         if(modal==0){
             openModal('modal1',"mask");
